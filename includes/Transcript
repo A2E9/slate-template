@@ -1,0 +1,192 @@
+<h1 id='transcript'>Transcript</h1><h2 id='create-transcript'>Create Transcript</h2>
+<p>Create a new HTML transcript of a Discord channel.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-post">POST</i>
+        <h6>/transcripts</h6>
+    </div>
+</div>
+
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">Axios</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">Axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+    <span class="dl">"</span><span class="s2">https://api.walkaisa.dev/transcripts</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="na">token</span><span class="p">:</span> <span class="dl">"</span><span class="s2">MTA0ODMzMDc1Mzg2NTQzMzEwOQ.G3tbI5...</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">guild_id</span><span class="p">:</span> <span class="dl">"</span><span class="s2">893502016024875008</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">channel_id</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1089202275383255041</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">header</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">Guild</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Walkaisa Industries</span><span class="dl">"</span><span class="p">,</span>
+            <span class="na">Channel</span><span class="p">:</span> <span class="dl">"</span><span class="s2">general</span><span class="dl">"</span>
+        <span class="p">},</span>
+        <span class="na">footer</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Powered by Walkaisa Industries</span><span class="dl">"</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">Authorization</span><span class="p">:</span> <span class="dl">"</span><span class="s2">YOUR_KEY</span><span class="dl">"</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The transcript was successfully created."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.walkaisa.dev/transcripts/893502016024875008/1089202275383255041"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"buffer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BufferBase64"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='body-parameters'>Body Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>token</code></td>
+<td>string</td>
+<td>true</td>
+<td>The token of the Discord bot.</td>
+</tr>
+<tr>
+<td><code>guild_id</code></td>
+<td>string</td>
+<td>true</td>
+<td>The ID of the guild.</td>
+</tr>
+<tr>
+<td><code>channel_id</code></td>
+<td>string</td>
+<td>true</td>
+<td>The ID of the channel.</td>
+</tr>
+<tr>
+<td><code>header</code></td>
+<td>object</td>
+<td>true</td>
+<td>The header of the transcript.</td>
+</tr>
+<tr>
+<td><code>footer</code></td>
+<td>array</td>
+<td>true</td>
+<td>The footer of the transcript.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-transcript'>Delete Transcript</h2>
+<p>Delete a HTML transcript of a Discord channel.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-delete">DELETE</i>
+        <h6>/transcripts</h6>
+    </div>
+</div>
+
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">Axios</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">Axios</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span>
+    <span class="dl">"</span><span class="s2">https://api.walkaisa.dev/transcripts</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="na">guild_id</span><span class="p">:</span> <span class="dl">"</span><span class="s2">893502016024875008</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">channel_id</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1089202275383255041</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">Authorization</span><span class="p">:</span> <span class="dl">"</span><span class="s2">YOUR_KEY</span><span class="dl">"</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The transcript was successfully deleted."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='body-parameters-2'>Body Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>guild_id</code></td>
+<td>string</td>
+<td>true</td>
+<td>The ID of the guild.</td>
+</tr>
+<tr>
+<td><code>channel_id</code></td>
+<td>string</td>
+<td>true</td>
+<td>The ID of the channel.</td>
+</tr>
+</tbody></table>
+<h2 id='get-transcript'>Get Transcript</h2>
+<p>Get a HTML transcript of a Discord channel.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<div class="api-endpoint">
+    <div class="endpoint-data">
+        <i class="label label-get">GET</i>
+        <h6>/transcripts/&lt;guild_id&gt;/&lt;channel_id&gt;</h6>
+    </div>
+</div>
+
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">Axios</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">Axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://api.walkaisa.dev/transcripts/893502016024875008/1089202275383255041</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">Authorization</span><span class="p">:</span> <span class="dl">"</span><span class="s2">YOUR_KEY</span><span class="dl">"</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight html tab-html"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    ...
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div><h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>guild_id</code></td>
+<td>string</td>
+<td>true</td>
+<td>The ID of the guild.</td>
+</tr>
+<tr>
+<td><code>channel_id</code></td>
+<td>string</td>
+<td>true</td>
+<td>The ID of the channel.</td>
+</tr>
+</tbody></table>

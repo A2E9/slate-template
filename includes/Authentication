@@ -1,0 +1,12 @@
+<h1 id='authentication'>Authentication</h1>
+<p>To ensure secure and authorized access to our API, we use API keys. In order to obtain an API key, please join our <a href="https://walkaisa.dev/discord">Discord Server</a> and follow the instructions provided there.</p>
+
+<p>Once you have obtained your API key, you will need to include it in the header of your API requests. Specifically, you should include the following line in the header of your request:</p>
+
+<p><code>Authorization: YOUR_KEY</code></p>
+
+<p>By including your API key in the header of your requests, you can be confident that your requests will be properly authenticated and authorized, and that your access to our API will remain secure. If you have any questions or concerns about using our API, please do not hesitate to reach out to us via our <a href="https://walkaisa.dev/discord">Discord Server</a>. Thank you for choosing our API service!</p>
+
+<aside class="notice">
+You must replace <code>YOUR_KEY</code> with your personal API key.
+</aside>
